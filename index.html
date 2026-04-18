@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechIntel | Advanced Puzzle App</title>
+    <meta name="description"
+        content="Master coding interviews with high-difficulty technical puzzles. Daily challenges, practice mode, and deep technical insights.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="dark-theme">
+    <div id="app" class="app-container">
+        <!-- Header -->
+        <header class="main-header">
+            <div class="logo">
+                <span class="icon">⚡</span>
+                <h1>TechIntel-Quiz</h1>
+            </div>
+            <div class="stats-bar" id="top-stats">
+                <div class="stat-item">
+                    <span class="label">Streak</span>
+                    <span class="value" id="streak-val">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="label">Score</span>
+                    <span class="value" id="score-val">0</span>
+                </div>
+            </div>
+        </header>
+
+        <main id="main-content">
+            <!-- Home Screen -->
+            <section id="home-screen" class="view">
+                <div class="hero">
+                    <h2>Master the <span class="highlight">Unseen</span></h2>
+                    <p>High-difficulty technical puzzles designed for serious learners.</p>
+                </div>
+
+                <div class="mode-selection">
+                    <button id="start-daily" class="btn btn-primary">
+                        <span class="btn-icon">📅</span>
+                        <div class="btn-text">
+                            <strong>Daily Challenge</strong>
+                            <span>One global puzzle per day</span>
+                        </div>
+                    </button>
+
+                    <button id="start-practice" class="btn btn-secondary">
+                        <span class="btn-icon">🧠</span>
+                        <div class="btn-text">
+                            <strong>Practice Mode</strong>
+                            <span>Unlimited training sessions</span>
+                        </div>
+                    </button>
+                </div>
+
+                <div class="dashboard-preview">
+                    <h3>Performance Overview</h3>
+                    <div class="stats-grid">
+                        <div class="mini-card">
+                            <span class="label">Accuracy</span>
+                            <span class="value" id="accuracy-stat">0%</span>
+                        </div>
+                        <div class="mini-card">
+                            <span class="label">Solved</span>
+                            <span class="value" id="solved-stat">0</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quiz Screen -->
+            <section id="quiz-screen" class="view hidden">
+                <div class="quiz-header">
+                    <div class="progress-info">
+                        <span id="category-tag" class="badge">DSA</span>
+                        <span id="difficulty-tag" class="badge hard">HARD</span>
+                    </div>
+                    <div class="timer-container">
+                        <div id="timer-bar" class="timer-bar"></div>
+                        <span id="timer-text">30s</span>
+                    </div>
+                </div>
+
+                <div class="question-container">
+                    <p id="question-text" class="question">Loading challenge...</p>
+                    <div id="code-wrapper" class="code-wrapper hidden">
+                        <pre id="code-snippet"><code></code></pre>
+                    </div>
+                </div>
+
+                <div id="options-grid" class="options-grid">
+                    <!-- Options injected here -->
+                </div>
+
+                <div id="feedback-panel" class="feedback-panel hidden">
+                    <div class="feedback-content">
+                        <h4 id="feedback-title">Correct!</h4>
+                        <div id="explanation-text" class="explanation"></div>
+                        <button id="next-btn" class="btn btn-accent">Next Challenge</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Results Screen -->
+            <section id="results-screen" class="view hidden">
+                <div class="results-card glass">
+                    <h2>Session Complete</h2>
+                    <div class="final-stats">
+                        <div class="stat-circle">
+                            <span id="final-score" class="big-val">0</span>
+                            <span>Points</span>
+                        </div>
+                    </div>
+                    <button id="back-home" class="btn btn-secondary">Return Home</button>
+                </div>
+            </section>
+        </main>
+
+        <footer class="main-footer">
+            <p>&copy; 2026 TechIntel Engine • Serious Learning Only</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
